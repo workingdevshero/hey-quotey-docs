@@ -8,40 +8,21 @@ Let's discover **Hey Quotey in less than 5 minutes**.
 
 ## Getting Started
 
-Get started by **creating a new site**.
+Hey Quotey is an easy to use image generator that allows you to create fun and unique images from your favorite quotes.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+### Web
 
-### What you'll need
+You can launch the web app by clicking the link below.
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+[Launch Hey Quotey](https://heyquotey.app)
 
-## Generate a new site
+### iOS
 
-Generate a new Docusaurus site using the **classic template**.
+Hey Quotey is also available via an open beta on iOS. You can request an invite by clicking the link below.
 
-The classic template will automatically be added to your project after you run the command:
+[Request Hey Quotey iOS Beta Invite](https://heyquotey.app/beta)
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+### Android
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+Android support is coming soon.
 
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
