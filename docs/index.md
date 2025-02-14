@@ -6,7 +6,9 @@ sidebar_position: 1
 
 Let's discover **Hey Quotey in less than 5 minutes**.
 
-## Getting Started
+![Hey Quotey Banner](img/banner.png)
+
+## Getting Started 👨‍🏫
 
 Hey Quotey is an easy to use image generator that allows you to create fun and unique images from your favorite quotes.
 
@@ -20,7 +22,7 @@ You can launch the web app by clicking the link below.
 
 Hey Quotey is also available via an open beta on iOS. You can request an invite by clicking the link below.
 
-[Request Hey Quotey iOS Beta Invite](https://heyquotey.app/beta)
+[Join the Hey Quotey iOS Beta](https://testflight.apple.com/join/2rhyB715)
 
 ### Android
 
