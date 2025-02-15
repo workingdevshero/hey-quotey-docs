@@ -1,0 +1,76 @@
+openapi: 3.0.0
+info:
+  title: Hey Quotey API
+  version: 1.0.0
+  description: |
+    Hey Quotey provides a simple API that allows you to generate images containing quotes. To use the API, you need to generate an API key. To make an authenticated request, include the API key in the `X-Hey-Quotey-API-Key` header.
+
+    ### Generating API Keys
+
+    ![How to generate an API key](./img/demo-api-key.gif)
+
+    1. Navigate to the [Account](https://heyquotey.com/home/account) page.
+    2. Click the ⊕ button under the "API Keys" section.
+    3. Click the "Copy" button to copy the API key to your clipboard.
+
+
+servers:
+  - url: https://api.heyquotey.app
+    description: Production server
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-Hey-Quotey-API-Key
+paths:
+  /image:
+    post:
+      summary: Image
+      description: Generates an image containing the provided quote and source
+      security:
+        - ApiKeyAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - quote
+                - source
+                - size
+                - style
+              properties:
+                quote:
+                  type: string
+                  description: The quote text to render in the image
+                source:
+                  type: string
+                  description: The source or author of the quote
+                size:
+                  type: string
+                  description: The size of the generated image
+                  enum: [square, portrait, landscape]
+                style:
+                  type: string
+                  description: The visual style to apply to the image. Examples include minimal, nature, abstract, etc.
+      responses:
+        '200':
+          description: Successfully generated image
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  url:
+                    type: string
+                    description: Signed URL to download the generated image
+        '400':
+          description: Bad request - missing or invalid parameters
+        '401':
+          description: Unauthorized - invalid or expired API key
+        '429':
+          description: Too many requests - image generation limit exceeded
+        '500':
+          description: Internal server error

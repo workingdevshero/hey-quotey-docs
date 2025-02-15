@@ -1,0 +1,71 @@
+---
+id: image
+title: "Image"
+description: "Generates an image containing the provided quote and source"
+sidebar_label: "Image"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVs1u4zYQfpXp5LILyHKStofq5g2KJtiiTTcJUMA2sLQ4sbmRSIY/ThRDL9B7X7BPUgwl2c7GaYPWF8nkzPCbmW8+aoOSfOmUDcpoLPAn0uREIA9Cg6rFkqA0OgillV5CWBFYZ9ZKkoT7aAKB0BK8ia4kzNBTGZ0KDRbTDU6s+kjNJIYVFtN5O8/Q0X0kHz4Y2WCxSX+VI4lFcJEy5INIB94S1laqFAxq/MUzsg36ckW14LfQWMICzeILlQGzvUBTTKgYyhaTekqP0FSE8wytM5ZcUOQ5VGe+i+mDU3qJ2VdluV5Rn2+gxwDBgCMtyYHSqSipUthuj31TwM4WjAMRw8o4MLcpWIep7aG/LZR6osF92bdQ9qgyJB1rro2/j8LxgjUuOKG4dpXQ0pfCEs7boUpvOnKtfBQVJA8uCLes4ZdtPXL48VHUtiIPSpdVlAS10qoWVQZahOgoA7HwwYkyZEChzLFNP+6ot0b7rkenx8f8eA7hKpYleX8bq6o5kPJ/5tJzekRX/Xs1rtRSk4SbTz9z+tI86MoIebAXQ37fHUrpg5DQjwiMoFbe88wZJtlaVEqCFU7UFMh5TDFOXsa40R2X1BNJGG09jQN6tDwjMLm8gDtqUoTTH15GuDYGaqGbAYrnMEkI+mSU0VCpWgWgx5JIkuRY3x/K6EIHcppZQm5NDsg545ALUFNYGYkFWuNT2QXLBI6H/nUOPglJagKuQrC+GI+FVfmKmjQkTS6sfdGPS2dkLBPOLgyy+AzadMWt77q7r1DbJou0iBkqjrUiIclhhlrUvPv76Jya0W/p8NHk8mLEtpwQM+vTTt965u9JzI49g0bsraRB381nP4aDQctgbk0CqULaOacGOhTcUMyQq9Wlf5If58cvirLn0Cu4BwFeMcrEibASAURVmQcPjYlM5YG9Xf/9/k2QkvI5XBuInhLXJ5cXWfLURPKZu9AD65JDLe7SGjOVdODZpC3zs61W9DHZbZDZz4fK/xm6JuUzPdNHR0fQ32EMk/0/UuN565vpuXl4Bdf8XT5W9XIsqTYjYdWIsS7V7Xt2PMnhF7FWS3bp9W06KUsTdZi/G2i5o2Rp6vHK1DQWnc17sCyGM32aw1mlyrsU4a8//oRFDMFoiOkm4cUZbgEjeEoczmf6233HGZ4Z28xw8A4GSmObZ+UKhhvhoKyUXRjhZD7TzCIetlokBez5fNHP2zOybHby+T8/CPqZ4ktzbCuhEopeVLuRn2I38vMMVywFxRQ3m4XwdOOqtuXl+0iOvyjmGa6FU2LBAzDl26ofTtYIVrQCzzrYo2s+ls2r2I30VzdAmw0ek7IkG/7Rdr6nVpe/Xl1jhov+C6Y2kn2ceOCvEPGABWKGJpUxKUxa2/Alu4ycZYFdTFYM8UJ37pLu9C+c1bClmz2EByUo6/PplP0Vz82mE7e23dp3W696bOWvs+b+zdu2/RsWmoa3
+sidebar_class_name: "post api-method"
+info_path: developers/hey-quotey-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Image"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/image"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Generates an image containing the provided quote and source
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["quote","source","size","style"],"properties":{"quote":{"type":"string","description":"The quote text to render in the image"},"source":{"type":"string","description":"The source or author of the quote"},"size":{"type":"string","description":"The size of the generated image","enum":["square","portrait","landscape"]},"style":{"type":"string","description":"The visual style to apply to the image. Examples include minimal, nature, abstract, etc."}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successfully generated image","content":{"application/json":{"schema":{"type":"object","properties":{"url":{"type":"string","description":"Signed URL to download the generated image"}}}}}},"400":{"description":"Bad request - missing or invalid parameters"},"401":{"description":"Unauthorized - invalid or expired API key"},"429":{"description":"Too many requests - image generation limit exceeded"},"500":{"description":"Internal server error"}}}
+>
+  
+</StatusCodes>
+
+
+      
